@@ -1,0 +1,15 @@
+{
+    "name": "HTML5-Tags-Practice",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "lint": "prettier -w ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "prettier": "^2.5.1"
+    }
+}
