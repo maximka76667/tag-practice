@@ -1,3 +1,24 @@
-fieldset {
-    display: inline-block;
+.header {
+    background-color: blue;
+    color: #fff;
+    padding: 5px;
+}
+
+.header__heading {
+    margin: 0;
+}
+
+.form__row {
+    margin: 10px 0;
+}
+
+.footer {
+    text-align: center;
+    background-color: blue;
+    padding: 10px;
+    color: #fff;
+}
+
+.footer__copyright {
+    margin: 0;
 }

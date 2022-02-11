@@ -1,62 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ejercicio 2</title>
-    </head>
-    <body>
-        <header class="header">
-            <h1>Mi Web</h1>
-        </header>
-        <main class="content">
-            <form class="form">
-                <h2 class="form__heading">Formulario</h2>
-                <fieldset class="form__fieldset">
-                    <table>
-                        <legend>Cliente</legend>
-                        <tr>
-                            <td>Nombre y apellido <span>*</span>:</td>
-                            <td>
-                                <input type="text" name="nombre" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Dirección <span>*</span>:</td>
-                            <td>
-                                <textarea
-                                    name="direccion"
-                                    cols="30"
-                                    rows="10"
-                                    placeholder="Teclee aquí la dirección"
-                                ></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Código Postal <span>*</span>:</td>
-                            <td>
-                                <input type="text" name="cp" maxlength="5" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>País <span>*</span>:</td>
-                            <td><input type="text" name="pais"></td>
-                        </tr>
-                        <tr>
-                            <td>Fecha de nacimiento:</td>
-                            <td><input type="date" name="fecha-nacimiento"></td>
-                        </tr>
-                        <tr>
-                            <td>Email <span>*</span>:</td>
-                            <td><input type="text" name="email"></td>
-                        </tr>
-                    </table>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__heading">Mi Web</h1>
+    </header>
+    <main class="content">
+        <form class="form">
+            <h2 class="form__heading">Formulario</h2>
+            <fieldset class="form__fieldset">
+                <table>
+                    <legend>Cliente</legend>
+                    <tr>
+                        <td>Nombre y apellido <span>*</span>:</td>
+                        <td>
+                            <input type="text" name="nombre" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dirección <span>*</span>:</td>
+                        <td>
+                            <textarea name="direccion" cols="30" rows="10"
+                                placeholder="Teclee aquí la dirección"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Código Postal <span>*</span>:</td>
+                        <td>
+                            <input type="text" name="cp" maxlength="5" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>País <span>*</span>:</td>
+                        <td><input type="text" name="pais"></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de nacimiento:</td>
+                        <td><input type="date" name="fecha-nacimiento"></td>
+                    </tr>
+                    <tr>
+                        <td>Email <span>*</span>:</td>
+                        <td><input type="text" name="email"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Pedido</legend>
+                <p class="form__row">Modelo: <input name="model" type="text"></p>
+                <fieldset>
+                    <legend>Color <span>*</span></legend>
+                    <label><input name="color" value="rojo" type="radio">Rojo</label>
+                    <label><input name="color" value="azul" type="radio">Azul</label>
+                    <label><input name="color" value="amarillo" type="radio">Amarillo</label>
+                    <label><input name="color" value="rosa" type="radio">Rosa</label>
+                    <label><input name="color" value="voileta" type="radio">Violeta</label>
                 </fieldset>
-            </form>
-        </main>
-        <footer class="footer">
-            <p class="footer__copyright">© 2022. Mi Web</p>
-        </footer>
-    </body>
+                <p class="form__row">Cantidad <span>*</span>: <input type="number" name="cantidad" width="2"></p>
+            </fieldset>
+        </form>
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">© 2022. Mi Web</p>
+    </footer>
+</body>
+
 </html>
