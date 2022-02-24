@@ -1,6 +1,11 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');
+
 .content {
     width: 975px;
     margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
 }
 
 .header {
@@ -22,10 +27,25 @@
     text-align: center;
     font-size: 30px;
     margin: 5px 0;
+    text-shadow: 1px 1px 0 #eee;
+}
+
+.form__fieldset {
+    border-radius: 10px;
+    box-shadow: 1px 1px 0 blue;
+}
+
+.required:after {
+    content: ' *';
 }
 
 .form__row {
     margin: 10px 0;
+}
+
+input[required],
+textarea[required] {
+    border: 1px solid red;
 }
 
 .form__buttons {

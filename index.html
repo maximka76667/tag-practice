@@ -21,27 +21,27 @@
                     <legend>Cliente</legend>
                     <table>
                         <tr>
-                            <td>Nombre y apellido <span>*</span>:</td>
+                            <td><span class="required">Nombre y apellido</span>:</td>
                             <td>
                                 <input type="text" name="nombre" placeholder="Nombre y apellidos" required />
                             </td>
                         </tr>
                         <tr>
-                            <td>Dirección <span>*</span>:</td>
+                            <td><span class="required">Dirección</span>:</td>
                             <td>
                                 <textarea name="direccion" cols="18" rows="7" placeholder="Teclee aquí la dirección"
                                     required></textarea>
                             </td>
                         </tr>
                         <tr>
-                            <td>Código Postal <span>*</span>:</td>
+                            <td><span class="required">Código Postal</span>:</td>
                             <td>
                                 <input type="text" name="cp" maxlength="5" size="4"
                                     title="Teclee un codigo de 5 digitos" required />
                             </td>
                         </tr>
                         <tr>
-                            <td>País <span>*</span>:</td>
+                            <td><span class="required">País</span>:</td>
                             <td>
                                 <input type="text" list="paises" name="pais" value="España" required>
                                 <datalist id="paises">
@@ -57,24 +57,24 @@
                             <td><input type="date" name="fecha-nacimiento"></td>
                         </tr>
                         <tr>
-                            <td>Email <span>*</span>:</td>
+                            <td><span class="required">Email</span>:</td>
                             <td><input type="email" name="email" placeholder="Dirreción de email" required></td>
                         </tr>
                     </table>
                 </fieldset>
-                <fieldset>
+                <fieldset class="form__fieldset">
                     <legend>Pedido</legend>
                     <p class="form__row">Modelo: <input name="model" value="XS-3050" type="text" readonly></p>
                     <fieldset>
-                        <legend>Color <span>*</span></legend>
+                        <legend><span class="required">Color</span></legend>
                         <label><input name="color" value="rojo" type="radio" required>Rojo</label>
                         <label><input name="color" value="azul" type="radio">Azul</label>
                         <label><input name="color" value="amarillo" type="radio">Amarillo</label>
                         <label><input name="color" value="rosa" type="radio">Rosa</label>
                         <label><input name="color" value="voileta" type="radio">Violeta</label>
                     </fieldset>
-                    <p class="form__row">Cantidad <span>*</span>: <input type="number" name="cantidad" min="1" max="99"
-                            required></p>
+                    <p class="form__row"><span class="required">Cantidad</span>: <input type="number" name="cantidad"
+                            min="1" max="99" required></p>
                 </fieldset>
                 <div class="form__buttons">
                     <button class="form__submit-button" type="submit">Realizar pedido</button>
