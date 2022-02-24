@@ -1,3 +1,8 @@
+.content {
+    width: 975px;
+    margin: 0 auto;
+}
+
 .header {
     background-color: blue;
     color: #fff;
@@ -8,8 +13,29 @@
     margin: 0;
 }
 
+.main {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.form__heading {
+    text-align: center;
+    font-size: 30px;
+    margin: 5px 0;
+}
+
 .form__row {
     margin: 10px 0;
+}
+
+.form__buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.form__submit-button {
+    margin-right: 10px;
 }
 
 .footer {

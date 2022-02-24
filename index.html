@@ -10,66 +10,82 @@
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="header__heading">Mi Web</h1>
-    </header>
-    <main class="content">
-        <form class="form">
-            <h2 class="form__heading">Formulario</h2>
-            <fieldset class="form__fieldset">
-                <table>
+    <div class="content">
+        <header class="header">
+            <h1 class="header__heading">Mi Web</h1>
+        </header>
+        <main class="main">
+            <form class="form" action="procesa_formulario.php" method="POST">
+                <h2 class="form__heading">Formulario</h2>
+                <fieldset class="form__fieldset">
                     <legend>Cliente</legend>
-                    <tr>
-                        <td>Nombre y apellido <span>*</span>:</td>
-                        <td>
-                            <input type="text" name="nombre" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Dirección <span>*</span>:</td>
-                        <td>
-                            <textarea name="direccion" cols="30" rows="10"
-                                placeholder="Teclee aquí la dirección"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Código Postal <span>*</span>:</td>
-                        <td>
-                            <input type="text" name="cp" maxlength="5" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>País <span>*</span>:</td>
-                        <td><input type="text" name="pais"></td>
-                    </tr>
-                    <tr>
-                        <td>Fecha de nacimiento:</td>
-                        <td><input type="date" name="fecha-nacimiento"></td>
-                    </tr>
-                    <tr>
-                        <td>Email <span>*</span>:</td>
-                        <td><input type="text" name="email"></td>
-                    </tr>
-                </table>
-            </fieldset>
-            <fieldset>
-                <legend>Pedido</legend>
-                <p class="form__row">Modelo: <input name="model" type="text"></p>
-                <fieldset>
-                    <legend>Color <span>*</span></legend>
-                    <label><input name="color" value="rojo" type="radio">Rojo</label>
-                    <label><input name="color" value="azul" type="radio">Azul</label>
-                    <label><input name="color" value="amarillo" type="radio">Amarillo</label>
-                    <label><input name="color" value="rosa" type="radio">Rosa</label>
-                    <label><input name="color" value="voileta" type="radio">Violeta</label>
+                    <table>
+                        <tr>
+                            <td>Nombre y apellido <span>*</span>:</td>
+                            <td>
+                                <input type="text" name="nombre" placeholder="Nombre y apellidos" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dirección <span>*</span>:</td>
+                            <td>
+                                <textarea name="direccion" cols="18" rows="7" placeholder="Teclee aquí la dirección"
+                                    required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Código Postal <span>*</span>:</td>
+                            <td>
+                                <input type="text" name="cp" maxlength="5" size="4"
+                                    title="Teclee un codigo de 5 digitos" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>País <span>*</span>:</td>
+                            <td>
+                                <input type="text" list="paises" name="pais" value="España" required>
+                                <datalist id="paises">
+                                    <option value="España">
+                                    <option value="Portugal">
+                                    <option value="Francia">
+                                    <option value="Inglaterra">
+                                </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fecha de nacimiento:</td>
+                            <td><input type="date" name="fecha-nacimiento"></td>
+                        </tr>
+                        <tr>
+                            <td>Email <span>*</span>:</td>
+                            <td><input type="email" name="email" placeholder="Dirreción de email" required></td>
+                        </tr>
+                    </table>
                 </fieldset>
-                <p class="form__row">Cantidad <span>*</span>: <input type="number" name="cantidad" width="2"></p>
-            </fieldset>
-        </form>
-    </main>
-    <footer class="footer">
-        <p class="footer__copyright">© 2022. Mi Web</p>
-    </footer>
+                <fieldset>
+                    <legend>Pedido</legend>
+                    <p class="form__row">Modelo: <input name="model" value="XS-3050" type="text" readonly></p>
+                    <fieldset>
+                        <legend>Color <span>*</span></legend>
+                        <label><input name="color" value="rojo" type="radio" required>Rojo</label>
+                        <label><input name="color" value="azul" type="radio">Azul</label>
+                        <label><input name="color" value="amarillo" type="radio">Amarillo</label>
+                        <label><input name="color" value="rosa" type="radio">Rosa</label>
+                        <label><input name="color" value="voileta" type="radio">Violeta</label>
+                    </fieldset>
+                    <p class="form__row">Cantidad <span>*</span>: <input type="number" name="cantidad" min="1" max="99"
+                            required></p>
+                </fieldset>
+                <div class="form__buttons">
+                    <button class="form__submit-button" type="submit">Realizar pedido</button>
+                    <button class="form__reset-button" type="reset">Anular</button>
+                </div>
+            </form>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">© 2022. Mi Web</p>
+        </footer>
+    </div>
 </body>
 
 </html>

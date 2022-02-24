@@ -7,7 +7,7 @@
         "lint": "prettier -w ."
     },
     "keywords": [],
-    "author": "",
+    "author": "Maxim Grivennyy",
     "license": "ISC",
     "devDependencies": {
         "prettier": "^2.5.1"
